@@ -1,0 +1,36 @@
+{
+  "name": "chained-motion",
+  "version": "0.1.0",
+  "description": "Composable offset-path based animation builder with timeline support.",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir lib",
+    "dev": "tsup src/index.ts --watch --dts --out-dir lib",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "animation",
+    "motion",
+    "timeline",
+    "builder",
+    "offset-path",
+    "keyframes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.0"
+  }
+}
