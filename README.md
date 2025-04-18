@@ -4,6 +4,18 @@ A minimal, powerful and composable animation system based on `offset-path`. Defi
 
 ---
 
+## 📦 Installation
+
+```bash
+npm install chained-motion
+# or
+yarn add chained-motion
+# or
+pnpm add chained-motion
+```
+
+---
+
 ## ✨ Features
 
 - Chainable motion builder with `Promise`-based execution
@@ -19,6 +31,8 @@ A minimal, powerful and composable animation system based on `offset-path`. Defi
 ### Motion
 
 ```ts
+import { Motion } from "chained-motion"
+
 const motion = new Motion(node)
 
 await motion
@@ -88,6 +102,8 @@ type StepFactory = (args: GenerateStepArgs) => Step
 `MotionTimeline` chains multiple `Motion` or `MotionTimeline` instances and plays them sequentially.
 
 ```ts
+import { MotionTimeline } from "chained-motion"
+
 const timeline = new MotionTimeline()
 
 await timeline
